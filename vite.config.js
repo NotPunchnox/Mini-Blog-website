@@ -1,6 +1,7 @@
 export default {
-    esbuild: {
-      target: 'es2022'
-    }
-  }
-  
+    optimizeDeps: {
+        esbuildOptions: {
+            target: "esnext",
+        },
+    },
+}
