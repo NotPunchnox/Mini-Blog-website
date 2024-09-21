@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+    --primary-bg-color: #3a3a3a;
+    --secondary-bg-color: #242424;
+    --primary-color: rgba(255, 255, 255, 0.85);
+    --secondary-color: #8E8E8E;
+    --hover-color: #8dc786;
+    --error-color: #cc614e;
+}
+
+body {
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+    margin: 0;
+}
+#description {
+    width: 80%;
+    text-align: center;
+    border: 0px;
+    background-color: transparent;
+}
+
+input, textarea {
+    outline: 0px;
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 10px;
+    background-color: #444;
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+textarea {
+    height: 300px;
+    max-height: 50%;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+
+
+input[type="file"] {
+    padding: 10px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="file"]:hover {
+    background-color: var(--hover-color);
+}
+img {
+    border: solid 2px #242424;
+    border-radius: 10px;
+}
+#imageUpload {
+    
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+}
+#Content {
+    width: 80%;
+}
+/* #blog-content {
+    width: 100%;
+} */
+
+button {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--hover-color);
+    color: var(--primary-bg-color);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    outline: none;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+input.title {
+    font-size: 3.2em;
+    font-weight: 300;
+    text-align: center;
+    background-color: var(--primary-bg-color);
+    border: none;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+input.title::placeholder {
+    color: var(--primary-color)
+}

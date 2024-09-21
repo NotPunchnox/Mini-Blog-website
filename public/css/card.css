@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+
+
+.bg {
+    border-radius: 15px;
+    padding: 20px;
+    background: #3a3a3a;
+    width: auto;
+    height: auto;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Raleway', 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    align-items: center;
+    text-shadow: 0 1px 9px rgba(0, 0, 0, 0.8);
+    margin: auto;
+    margin-top: 0;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.blog-card {
+    max-width: 400px;
+    width: 100%;
+    min-width: 200px;
+    display: block;
+    position: relative;
+    height: 250px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+    transition: all 450ms ease-out 0s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog-card .blog-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.blog-card:hover {
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.85);
+}
+
+.blog-card:hover .text-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    height: 50%;
+    top: 50%;
+    transition: all 450ms ease-in-out 0s;
+}
+
+.blog-card:hover p {
+    height: 60px;
+    transition: all 350ms ease-in-out 0s;
+}
+
+.blog-card:hover p a {
+    visibility: visible;
+}
+
+.text-overlay {
+    position: relative;
+    background: rgb(235 227 219 / 92%);
+    height: 40%;
+    top: 60%;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+    padding: 10px 12px;
+    overflow: hidden;
+    transition: all 450ms ease-in-out 0s;
+    cursor: pointer;
+}
+
+.text-overlay h2 {
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0.0225em;
+    width: auto;
+    margin: 0;
+}
+
+.text-overlay p {
+    color: #555;
+    height: 38px;
+    margin: 8px 0;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text-overlay a {
+    color: #378aee;
+    text-decoration: none;
+    transition: all 350ms linear;
+    visibility: hidden;
+}
+
+.text-overlay a:hover {
+    color: #449cc5;
+    border-bottom: 1px dotted #47a8f2;
+}
+
+.credit {
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Lato", 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    bottom: -22vh;
+}
+
+.credit .creator-link {
+    color: rgba(255, 255, 255, 0.95);
+    font-family: 'Kaushan Script', 'Lato', 'Helvetica Neue', sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 350ms linear;
+}
+
+.credit .creator-link:hover {
+    color: #44bcc5;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    transition: all 350ms linear;
+}
+
+#Section-Card {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+}
