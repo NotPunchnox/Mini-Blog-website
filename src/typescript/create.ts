@@ -7,7 +7,6 @@ import GetBlogs from './GetBlogs';
 
 let Blogs = await GetBlogs()
 
-
 const UserID = localStorage.getItem('id');
 if (!UserID || !users.find((a: USER) => a.id === UserID)) {
     window.location.href = "/";

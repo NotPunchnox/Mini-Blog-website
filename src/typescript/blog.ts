@@ -5,6 +5,7 @@ import '../../public/css/blog.css';
 import users from "../DB/users.json";
 import GetBlogs from './GetBlogs';
 
+
 let Blogs = await GetBlogs()
 
 const blogId = window.location.search.replace('?id=', '').replace(/%20/g, ' ');

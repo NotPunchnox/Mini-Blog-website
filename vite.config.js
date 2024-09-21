@@ -1,6 +1,6 @@
 export default {
     esbuild: {
-      target: 'esnext'
+      target: 'es2022'
     }
   }
   
