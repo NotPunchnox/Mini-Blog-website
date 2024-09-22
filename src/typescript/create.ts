@@ -12,7 +12,7 @@ const Base_site = "https://mini-blog-website.onrender.com";
 
 const UserID = localStorage.getItem('id');
 if (!UserID || !users.find((a: USER) => a.id === UserID)) {
-    window.location.href = "/";
+    window.location.href = "/pages/login";
 }
 
 interface USER {

@@ -13,16 +13,9 @@
 
 .title {
     color: rgba(255, 255, 255, 0.85);
-    font-family: 'Raleway', 'Lato', 'Helvetica Neue', Arial, sans-serif;
     font-size: 32px;
     font-weight: 800;
-    text-align: center;
     align-items: center;
-    text-shadow: 0 1px 9px rgba(0, 0, 0, 0.8);
-    margin: auto;
-    margin-top: 0;
-    padding-bottom: 40px;
-    padding-top: 40px;
 }
 
 .blog-card {
@@ -96,7 +89,7 @@
 
 .text-overlay p {
     color: #555;
-    height: 38px;
+    height: 50px;
     margin: 8px 0;
     line-height: 1.25;
     text-overflow: ellipsis;

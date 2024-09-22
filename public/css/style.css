@@ -13,11 +13,48 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+#profil {
+    text-align: center;
+    height: 40px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+#profil button {
+    padding: 10px;
+    height: 40px;
+    width: 90px;
+    border-radius: 7px;
+}
+#profil a {
+    font-size: smaller;
+    color: #242424
+}
+#profil a:hover {
+    color: #93e9ba
+}
+
+.title {
+    font-weight: 600;
+}
+.Nav {
+    width: 90%;
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
 a {
     font-weight: 400;
-    font-size:smaller;
+    font-size: smaller;
     color: #93e9ba;
     text-decoration: inherit;
+}
+.Nav a {
+    font-size: 24px;
 }
 
 body {
@@ -30,12 +67,14 @@ h1 {
 }
 
 #app {
+    display: flex;
     min-height: 93vh;
     text-align: center;
     justify-content: center;
     align-items: center;
     max-width: 95%;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 #create {
@@ -65,38 +104,16 @@ h1 {
     color: #888;
 }
 
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-
 button:hover {
-    border-color: #646cff;
+    outline: none;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
+@media screen and (max-width: 600px) {
+    .Nav {
+        flex-direction: column;
     }
 
-    a:hover {
-        color: #747bff;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
 }

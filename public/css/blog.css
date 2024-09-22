@@ -30,12 +30,13 @@ body {
 
 .Bar h1 {
     font-weight: 300;
+    font-size: 24px;
 }
 
 .Bar a, p {
     transition: color 200ms;
 
-    font-size: large;
+    font-size: 17px;
     font-weight: bold;
 }
 
