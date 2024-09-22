@@ -18,14 +18,14 @@ Blogs.forEach((a: any) => {
         <div class="text-overlay">
 
             <h2>${a.name}</h2>
-            <p>${a.description}<br><a href="/pages/blogs?id=${a.name}" class="read-more">Voir plus</a></p>
+            <p>${a.description}<br><a href="/pages/blogs.html?id=${a.name}" class="read-more">Voir plus</a></p>
 
         </div>
     </div>`
 })
 
 if(!localStorage.getItem('id') || !Users.find((a: any) => a.id == localStorage.getItem('id'))) {
-    document.querySelector<HTMLDivElement>('#profil')!.innerHTML = `<button><a href="/pages/login">login</a></button><button href="/pages/register"><a href="/pages/register">register</a></button>`
+    document.querySelector<HTMLDivElement>('#profil')!.innerHTML = `<button><a href="/pages/login.html">login</a></button><button href="/pages/register.html"><a href="/pages/register.html">register</a></button>`
 } else {
     let user = Users.find((a: any) => a.id == localStorage.getItem('id'))
     document.querySelector<HTMLDivElement>('#profil')!.innerHTML = `<div class="user"><img src="${Base_site}/image/${user?.avatar}" alt="avatar">\n<h3>${user?.name}</h3></div>`;

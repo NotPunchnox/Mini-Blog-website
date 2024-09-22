@@ -12,7 +12,7 @@ const Base_site = "https://mini-blog-website.onrender.com";
 
 const UserID = localStorage.getItem('id');
 if (!UserID || !users.find((a: USER) => a.id === UserID)) {
-    window.location.href = "/pages/login";
+    window.location.href = "/pages/login.html";
 }
 
 interface USER {
@@ -97,7 +97,7 @@ export default async function Post() {
         const data = await response.json();
         console.log('Images téléchargées:', data.images);
         await setTimeout(() => '', 5000)
-        window.location.href = `/pages/blogs?id=${Title.value}`
+        window.location.href = `/pages/blogs.html?id=${Title.value}`
     } catch (error) {
         console.error('Erreur lors de l\'upload:', error);
     }
