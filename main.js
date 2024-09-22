@@ -97,6 +97,8 @@ app.post("/upload", upload.array("images"), (req, res) => {
             const destPath = path.join("./DB/images/", fileName);
             fs.copyFileSync(file.path, destPath);
             fs.rmSync(file.path);
+
+            images.push(fileName)
         });
     }
 
