@@ -163,7 +163,6 @@ body {
 }
 
 #Nav {
-    width: 300px;
     gap: 15px;
     display: flex;
     flex-direction: row;
