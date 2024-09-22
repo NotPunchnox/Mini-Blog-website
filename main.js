@@ -69,7 +69,7 @@ app.post("/register", upload.single("file"), (req, res) => {
 
 })
 app.post("/login", (req, res) => {
-    if (!req.body.username) return res.status(400).json({
+    if (!req.body.username || !req.body.password) return res.status(400).json({
         message: "bad request"
     })
 
