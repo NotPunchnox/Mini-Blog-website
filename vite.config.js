@@ -10,6 +10,8 @@ export default defineConfig({
                 main: './index.html',
                 blog: './pages/blogs.html',
                 create: './pages/create.html',
+                login: './pages/login.html',
+                register: './pages/register.html',
             }
         }
     },
