@@ -7,11 +7,11 @@ export default defineConfig({
         target: "es2022",
         rollupOptions: {
             input: {
-                main: './index.html',
-                blog: './pages/blogs.html',
-                create: './pages/create.html',
-                login: './pages/login.html',
-                register: './pages/register.html',
+                main: './index',
+                blog: './pages/blogs',
+                create: './pages/create',
+                login: './pages/login',
+                register: './pages/register',
             }
         }
     },
