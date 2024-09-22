@@ -1,7 +1,7 @@
 import '../../public/css/card.css'
 import '../../public/css/style.css'
 import '../../public/css/auth.css'
-// import '../../public/css/blog.css'
+import '../../public/css/blog.css'
 
 import GetBlogs from './GetBlogs';
 import GetUsers from './GetUsers';
