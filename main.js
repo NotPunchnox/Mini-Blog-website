@@ -81,7 +81,6 @@ app.post("/upload", upload.array("images"), (req, res) => {
         images,
         author
     });
-
     fs.writeFileSync(blogsFilePath, JSON.stringify(Blogs, null, 2), "utf8");
 
     res.json({
