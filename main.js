@@ -1,8 +1,8 @@
-import express from "express";
-import multer from "multer";
-import fs from "fs";
-import path from "path";
-import cors from "cors";
+const express = require('express');
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const upload = multer({ dest: "./imgs/" });
@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cors());
 
-const blogsFilePath = path.resolve("../src/DB/Blogs.json");
-const usersFilePath = path.resolve("../src/DB/users.json");
+const blogsFilePath = path.resolve("./DB/json/Blogs.json");
+const usersFilePath = path.resolve("./DB/json/users.json");
 let Blogs = JSON.parse(fs.readFileSync(blogsFilePath).toString());
 let users = JSON.parse(fs.readFileSync(usersFilePath).toString());
 
@@ -43,7 +43,7 @@ app.post("/upload", upload.array("images"), (req, res) => {
     if (req.files && req.files.length > 0) {
         req.files.forEach(file => {
             const fileName = `${Date.now()}-${file.originalname}`;
-            const destPath = path.join("../public/images/", fileName);
+            const destPath = path.join("./DB/images/", fileName);
             fs.copyFileSync(file.path, destPath);
             if(file.originalname.includes(".")) images.push(fileName);
             console.log(images)
@@ -64,10 +64,10 @@ app.post("/upload", upload.array("images"), (req, res) => {
     res.json({ images });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 
 
-export default app
+module.exports = app;
