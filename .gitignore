@@ -25,3 +25,4 @@ dist-ssr
 
 server/package-lock.json
 server/node_modules
+.vercel
