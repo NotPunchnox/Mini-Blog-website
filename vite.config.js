@@ -8,7 +8,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: './index.html',
-                blog: './pages/blog.html',
+                blog: './pages/blogs.html',
                 create: './pages/create.html',
             }
         }
