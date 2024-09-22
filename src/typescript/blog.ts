@@ -2,11 +2,11 @@
 import '../../public/css/style.css';
 import '../../public/css/blog.css';
 
-import users from "../DB/users.json";
 import GetBlogs from './GetBlogs';
+import GetUsers from './GetUsers';
 
-
-let Blogs = await GetBlogs()
+let Blogs = await GetBlogs();
+let users = await GetUsers();
 
 const blogId = window.location.search.replace('?id=', '').replace(/%20/g, ' ');
 
@@ -14,7 +14,7 @@ console.log(blogId)
 const Info = Blogs.find((a: any) => a.name == blogId);
 
 if (Info) {
-    const author = users.find(a => a.id === Info.author)
+    const author = users.find((a: any) => a.id === Info.author)
 
     document.querySelector<HTMLDivElement>('#App')!.innerHTML += `
         <div class="Bar">

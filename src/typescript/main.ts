@@ -5,7 +5,6 @@ import GetBlogs from './GetBlogs';
 
 let Blogs = await GetBlogs()
 
-
 Blogs.forEach((a: any) => {
     document.querySelector<HTMLDivElement>('#Section-Card')!.innerHTML += `
     <div class="blog-card">

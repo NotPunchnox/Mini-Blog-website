@@ -2,10 +2,11 @@ import '../../public/css/style.css';
 import '../../public/css/blog.css';
 import '../../public/css/input.css';
 
-import users from "../DB/users.json";
 import GetBlogs from './GetBlogs';
+import GetUsers from './GetUsers';
 
-let Blogs = await GetBlogs()
+let Blogs = await GetBlogs();
+let users = await GetUsers();
 
 const UserID = localStorage.getItem('id');
 if (!UserID || !users.find((a: USER) => a.id === UserID)) {
