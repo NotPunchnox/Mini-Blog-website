@@ -85,7 +85,7 @@ export default async function Post() {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/upload', {
+        const response = await fetch(Base_site + '/upload', {
             method: 'POST',
             body: formData
         });

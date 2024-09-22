@@ -2,8 +2,8 @@ import '../../public/css/style.css';
 import '../../public/css/blog.css';
 import '../../public/css/auth.css';
 
-const Base_site = "http://localhost:8080";
-// const Base_site = "https://mini-blog-website.onrender.com";
+// const Base_site = "http://localhost:8080";
+const Base_site = "https://mini-blog-website.onrender.com";
 
 const usernameInput = document.querySelector<HTMLInputElement>('#username')!;
 const passwordInput = document.querySelector<HTMLInputElement>('#password')!;
