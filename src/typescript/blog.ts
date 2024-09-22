@@ -5,7 +5,7 @@ import '../../public/css/blog.css';
 import GetBlogs from './GetBlogs';
 import GetUsers from './GetUsers';
 
-const Base_site = "https://mini-blog-website.onrender.com/"
+const Base_site = "https://mini-blog-website.onrender.com"
 
 let Blogs = await GetBlogs();
 let users = await GetUsers();
