@@ -8,6 +8,8 @@ import GetUsers from './GetUsers';
 let Blogs = await GetBlogs();
 let users = await GetUsers();
 
+const Base_site = "https://mini-blog-website.onrender.com";
+
 const UserID = localStorage.getItem('id');
 if (!UserID || !users.find((a: USER) => a.id === UserID)) {
     window.location.href = "/";
@@ -31,7 +33,7 @@ const currentUser = users.find((a: USER) => a.id === UserID);
 
 if (currentUser && userDiv) {
     const { name, avatar } = currentUser;
-    userDiv.innerHTML = `<img src="../${avatar}" alt="avatar">\n<h3>${name}</h3>`;
+    userDiv.innerHTML = `<img src="${Base_site}/image/${avatar}" alt="avatar">\n<h3>${name}</h3>`;
 } else {
     console.error('Utilisateur non trouvé.');
 }

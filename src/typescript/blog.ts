@@ -5,6 +5,8 @@ import '../../public/css/blog.css';
 import GetBlogs from './GetBlogs';
 import GetUsers from './GetUsers';
 
+const Base_site = "https://mini-blog-website.onrender.com/"
+
 let Blogs = await GetBlogs();
 let users = await GetUsers();
 
@@ -26,7 +28,7 @@ if (Info) {
 
             <h1>${Info.name}</h1>
             <div class="user">
-                <img src="../${author?.avatar}" alt="avatar">
+                <img src="${Base_site}/image/${author?.avatar}" alt="avatar">
                 <h3>${author?.name}</h3>
             </div>
         </div>
@@ -40,7 +42,7 @@ if (Info) {
                 ${Info.content.replace(/# (.*)/g, '<h2>$1</h2>')}
                 <br/>
                 <div id="ImagesContent">
-                    ${String(Info.images.map((a: any) => `<img src="../public/images/${a}" alt="image${Date.now()}" class="blog-image">`)).replace(/,/, '')}
+                    ${String(Info.images.map((a: any) => `<img src="${Base_site}/image/${a}" alt="image${Date.now()}" class="blog-image">`)).replace(/,/, '')}
                 </div>
             </div>
         </div>
