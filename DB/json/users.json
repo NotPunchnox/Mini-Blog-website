@@ -2,7 +2,7 @@
 
     "id": "1234689",
     "name": "punchnox",
-    "avatar": "/public/images/punchnox.png"
+    "avatar": "punchnox.png"
 
 },
 
@@ -10,6 +10,6 @@
 
     "id": "6543210",
     "name": "Marinade",
-    "avatar": "/public/images/drone-ai.png"
+    "avatar": "drone-ai.png"
 
 }]
