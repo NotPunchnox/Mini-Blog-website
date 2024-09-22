@@ -35,10 +35,38 @@ app.get("/image/:id", (req, res) => {
 
     return res.status(200).sendFile(path.resolve('./DB/images/' + req.params.id));
 })
-app.post("/register", (req, res) => {
-    if (!req.body.username) return res.status(400).json({
+app.post("/register", upload.single("file"), (req, res) => {
+    console.log(req.body, req.file)
+    if (!req.body.username || !req.body.password || !req.file) return res.status(400).json({
         message: "bad request"
-    })
+    });
+
+    if(users.find(a => a.name === req.body.username)) return res.status(400).json({
+        message: "Username déjà utilisé"
+    });
+
+    let fileName;
+
+    if (req.file) {
+        let file = req.file;
+        fileName = `${Date.now()}-${file.originalname}`;
+        const destPath = path.join("./DB/images/", fileName);
+        fs.copyFileSync(file.path, destPath);
+        
+        fs.rmSync(file.path);
+    }
+
+    const doc = {
+        id: String(Date.now()),
+        name: req.body.username,
+        password: req.body.password,
+        avatar: fileName
+    };
+    users.push(doc);
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), "utf8");
+
+    return res.status(201).json(doc)
+
 })
 app.post("/login", (req, res) => {
     if (!req.body.username) return res.status(400).json({
@@ -46,7 +74,7 @@ app.post("/login", (req, res) => {
     })
 
     let user = users.find(a => a.name === req.body.username);
-    if (!user) return res.status(401).json({
+    if (!user || user.password && user.password !== req.body.password) return res.status(401).json({
         message: "unauthorized"
     });
 
@@ -68,8 +96,6 @@ app.post("/upload", upload.array("images"), (req, res) => {
             const fileName = `${Date.now()}-${file.originalname}`;
             const destPath = path.join("./DB/images/", fileName);
             fs.copyFileSync(file.path, destPath);
-            if (file.originalname.includes(".")) images.push(fileName);
-            console.log(images)
             fs.rmSync(file.path);
         });
     }

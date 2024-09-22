@@ -1,15 +1,12 @@
-[{
-
+[
+  {
     "id": "1234689",
     "name": "punchnox",
     "avatar": "punchnox.png"
-
-},
-
-{
-
+  },
+  {
     "id": "6543210",
     "name": "Marinade",
     "avatar": "drone-ai.png"
-
-}]
+  }
+]
