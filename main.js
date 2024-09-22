@@ -1,8 +1,8 @@
-import express from "express";
-import multer from "multer";
-import fs from "fs";
-import path from "path";
-import cors from "cors";
+const express = require('express');
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const upload = multer({ dest: "./imgs/" });
@@ -64,10 +64,10 @@ app.post("/upload", upload.array("images"), (req, res) => {
     res.json({ images });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 
 
-export default app
+module.exports = app;
