@@ -8,5 +8,11 @@
     "id": "6543210",
     "name": "Marinade",
     "avatar": "drone-ai.png"
+  },
+  {
+    "id": "1727033926142",
+    "name": "unchat",
+    "password": "test",
+    "avatar": "1727033926136-test.jpg"
   }
 ]
