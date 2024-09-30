@@ -25,7 +25,7 @@ Blogs.forEach((a: any) => {
 })
 
 if(!localStorage.getItem('id') || !Users.find((a: any) => a.id == localStorage.getItem('id'))) {
-    document.querySelector<HTMLDivElement>('#profil')!.innerHTML = `<button><a href="/pages/login.html">login</a></button><button href="/pages/register.html"><a href="/pages/register.html">register</a></button>`
+    document.querySelector<HTMLDivElement>('#profil')!.innerHTML = `<button button href="/pages/login.html"><a href="/pages/login.html">login</a></button><button href="/pages/register.html"><a href="/pages/register.html">register</a></button>`
 } else {
     let user = Users.find((a: any) => a.id == localStorage.getItem('id'))
     document.querySelector<HTMLDivElement>('#profil')!.innerHTML = `<div class="user"><img src="${Base_site}/image/${user?.avatar}" alt="avatar">\n<h3>${user?.name}</h3></div>`;

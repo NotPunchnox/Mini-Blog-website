@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-server/package-lock.json
-server/node_modules
+package-lock.json
+node_modules
 .vercel
