@@ -2,7 +2,7 @@ import '../../public/css/style.css';
 import '../../public/css/blog.css';
 import '../../public/css/auth.css';
 
-const Base_site = "http://localhost:3001";
+const Base_site = "http://172.23.128.1:3001";
 // const Base_site = "https://mini-blog-website.onrender.com";
 
 const avatarInput = document.querySelector<HTMLInputElement>('#avatarInput')!;
