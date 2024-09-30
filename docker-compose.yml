@@ -1,0 +1,29 @@
+
+services:
+  api:
+    build:
+      context: ./Mini-Blog-website
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    networks:
+      - webnet
+    
+  web:
+    build:
+      context: ./Blog-Website
+      dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
+    environment:
+      - NODE_ENV=production
+      - PORT=4173
+    networks:
+      - webnet
+    
+
+networks:
+  webnet:
